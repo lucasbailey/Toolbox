@@ -1,0 +1,20 @@
+﻿<h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Number Conversions</a>
+</h2>
+
+<div class="tabData noDisplay ">
+    <h3>Hex To Decimal</h3>
+    <input type="text" id="HexToDec" onkeyup="g.OutputToDestination('HexToDecDest', convert.HexToDecimal(this.value, this.form.ReverseHexToDec.checked));" />
+    <input type="checkbox" id="ReverseHexToDec" onclick="this.form.HexToDec.onkeyup();" /><label for="ReverseHexToDec">Reverse</label>
+    <div id="HexToDecDest"></div>
+
+    <h3>Hex To Binary</h3>
+    <input type="text" id="HexToBin" onkeyup="g.OutputToDestination('HexToBinDest', convert.HexToBinary(this.value, this.form.ReverseHexToBin.checked));" />
+    <input type="checkbox" id="ReverseHexToBin" onclick="this.form.HexToBin.onkeyup();" /><label for="ReverseHexToBin">Reverse</label>
+    <div id="HexToBinDest"></div>
+
+    <h3>Decimal To Binary</h3>
+    <input type="text" id="DecToBin" onkeyup="g.OutputToDestination('DecToBinDest', convert.DecToBinary(this.value, this.form.ReverseDecToBin.checked));" />
+    <input type="checkbox" id="ReverseDecToBin" onclick="this.form.DecToBin.onkeyup();" /><label for="ReverseDecToBin">Reverse</label>
+    <div id="DecToBinDest"></div>
+</div>

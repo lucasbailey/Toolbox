@@ -1,0 +1,63 @@
+﻿<h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="DoSorts();tab.showTab(this);">Sorts</a>
+</h2>
+
+<div class="tabData noDisplay defaultTab">
+    <span>The Array List:</span>
+    <br />
+    <div id="TheArrayListDisplayed"></div>
+    <br />
+    <span>The Bubble Sorted Array List:</span>
+    <br />
+    <div id="TheArrayListBubbleSortDisplayed"></div>
+    <br />
+    <br />
+    <span>The Selection Sorted Array List:</span>
+    <br />
+    <div id="TheArrayListSelectionSortDisplayed"></div>
+    <br />
+    <br />
+    <span>The Insertion Sorted Array List:</span>
+    <br />
+    <div id="TheArrayListInsertionSortDisplayed"></div>
+
+    <script type="text/javascript">
+
+        var theDispObj;
+
+        function DoSorts() {
+            sort.SetArrayList(ArrayToLoad.slice());
+
+            theDispObj = document.getElementById("TheArrayListDisplayed");
+            theDispObj.innerHTML = "";
+            sort.DisplayArrayList(theDispObj);
+
+            theDispObj = document.getElementById("TheArrayListBubbleSortDisplayed");
+            theDispObj.innerHTML = "";
+
+            sort.BubbleSort();
+            sort.DisplayArrayList(theDispObj);
+
+            theDispObj.innerHTML += "<br/>Number of Bubble Sort swaps: " + sort.BubbleSort.NumOfSwaps.toString();
+            theDispObj.innerHTML += "<br/>Number of Bubble Sort loops: " + sort.BubbleSort.NumOfLoops.toString();
+
+            sort.SelectionSort();
+
+            theDispObj = document.getElementById("TheArrayListSelectionSortDisplayed");
+            theDispObj.innerHTML = "";
+            sort.DisplayArrayList(theDispObj);
+
+            theDispObj.innerHTML += "<br/>Number of Selection Sort swaps: " + sort.SelectionSort.NumOfSwaps.toString();
+            theDispObj.innerHTML += "<br/>Number of Selection Sort loops: " + sort.SelectionSort.NumOfLoops.toString();
+
+            sort.InsertionSort();
+
+            theDispObj = document.getElementById("TheArrayListInsertionSortDisplayed");
+            theDispObj.innerHTML = "";
+            sort.DisplayArrayList(theDispObj);
+
+            theDispObj.innerHTML += "<br/>Number of Insertion Sort swaps: " + sort.InsertionSort.NumOfSwaps.toString();
+            theDispObj.innerHTML += "<br/>Number of Insertion Sort loops: " + sort.InsertionSort.NumOfLoops.toString();
+        }
+    </script>
+</div>

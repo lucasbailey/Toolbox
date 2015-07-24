@@ -1,0 +1,11 @@
+﻿<h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Max Stats</a>
+</h2>
+
+<div class="tabData noDisplay defaultTab">
+	<span>Total Possible Words:</span>
+	<span id="NumPossibleWords"></span>
+	<br />
+	<span>Max Possible Score:</span>
+	<span id="maxScore"></span>
+</div>

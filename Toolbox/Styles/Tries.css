@@ -1,0 +1,9 @@
+﻿.displaySuggestArrayItem{
+    color: white;
+    background-color: red;
+    border: double black 3px;
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 3px;
+    text-decoration: none;
+}

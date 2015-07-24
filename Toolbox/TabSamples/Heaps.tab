@@ -1,0 +1,25 @@
+﻿<h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Heaps</a>
+</h2>
+
+<div class="tabData noDisplay ">
+    <h3>Heaps</h3>
+    Array List:<br />
+    <div id="HeapDisplay"></div>
+    <br />
+    <br />
+    Post Balance:<br />
+    <div id="BalancedHeap"></div>
+    <br />
+    <br />
+
+    <script type="text/javascript">
+        theDispObj = document.getElementById("HeapDisplay");
+        theDispObj.innerHTML = ArrayToLoad.slice().join(", ");
+
+        heap.load(ArrayToLoad);
+
+        theDispObj = document.getElementById("BalancedHeap");
+        theDispObj.innerHTML = heap.GetHeap().slice().join(", ");
+    </script>
+</div>

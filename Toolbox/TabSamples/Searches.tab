@@ -1,0 +1,46 @@
+﻿<h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Searches</a>
+</h2>
+
+<div class="tabData noDisplay ">
+    <h3>The Array List</h3>
+    <div id="TheSearchArray"></div>
+    <br />
+    <span>The number to find:</span><br />
+    <input type="text" id="TheSearchInput" value="" onblur="DoSearch(this.value);" /><br />
+
+    <h3>The Linear Search:</h3>
+
+    <div id="TheLinearSearchDisplayed"></div>
+    <h3>The Bubble Sorted Array List, Binary Search:</h3>
+    <div id="TheBinarySearchDisplayed"></div>
+
+    <script type="text/javascript">
+        search.SetArrayList(ArrayToLoad);
+
+        theDispObj = document.getElementById("TheSearchArray");
+        theDispObj.innerHTML = "";
+        search.DisplayArrayList(theDispObj);
+
+        function DoSearch(numToSearch) {
+            if (isNaN(numToSearch)) {
+                g.DisplayCustomError("Not a number!  Search failed.")
+                return null;
+            }
+
+            theDispObj = document.getElementById("TheLinearSearchDisplayed");
+
+            theDispObj.innerHTML = "";
+            theDispObj.innerHTML += "<br/>Index via Linear Search found at: " + search.Linear(numToSearch, sort.BubbleSort).join(", ");
+            //search.DisplayArrayList(theDispObj);
+
+            theDispObj = document.getElementById("TheBinarySearchDisplayed");
+
+            theDispObj.innerHTML = "";
+            theDispObj.innerHTML += "<br/>Index via Binary Search found at: " + search.Binary(numToSearch, sort.BUBBLE_SORT);
+            search.DisplayArrayList(theDispObj);
+            theDispObj.innerHTML += "<br/>Number of Binary Search loops: " + search.Binary.NumOfLoops.toString();
+            search.SetArrayList(ArrayToLoad);
+        }
+    </script>
+</div>
