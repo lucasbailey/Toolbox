@@ -136,7 +136,7 @@
     function _getWordsInTrie(partialWord, options) {
         //options = (options == null ? {} : options);
         options.minLength = (options.minLength == null ? 1 : options.minLength);
-        options.counter = (options.counter == null ? 1 : options.counter);
+        options.counter = (options.counter == null ? -1 : options.counter);
         options.excludeWord = (options.excludeWord == null ? "" : options.excludeWord);
 
         var node = _getTrie(partialWord, TrieList);
@@ -149,6 +149,9 @@
                         wordList[wordList.length] = partialWord + key.toString();
                     }
                 }
+                if (wordList.length >= options.counter && options.counter > 0) {
+                    return wordList.slice(0, options.counter);
+                }
                 wordList = wordList.concat(_getWordsInTrie(partialWord + key.toString(), options));
             }
         }
@@ -156,7 +159,7 @@
             return [];
         }
 
-        return wordList;
+        return wordList.slice(0, (options.counter > 0 ? options.counter : wordlist.length));
     }
 
     //get the trie up to the last letter supplied in the word parameter            

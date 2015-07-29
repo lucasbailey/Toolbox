@@ -1,0 +1,12 @@
+﻿<div>
+  <h2 class="tab">
+    <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Clocks</a>
+  </h2>
+
+  <div class="tabData noDisplay ">
+    <h3>Clocks</h3>
+		<div>
+		hours
+		</div>
+  </div>
+</div>

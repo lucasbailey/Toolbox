@@ -27,7 +27,6 @@
     top: 200px;
     margin: 0px;
     background-color: red;
-    
 }
 
 .GenericErrorContainerOverlay {
@@ -37,12 +36,11 @@
     width: 100%;
     top: 0px;
     left: 0px;
-    
 }
 
-.GenericErrorFlag{
-    display : inline-block;
-    position : absolute;
+.GenericErrorFlag {
+    display: inline-block;
+    position: absolute;
     padding: 5px;
     background-color: red;
     border: solid black 1px;

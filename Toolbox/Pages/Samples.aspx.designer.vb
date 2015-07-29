@@ -68,6 +68,15 @@ Partial Public Class Samples
     Protected WithEvents tab5 As Global.Tab.Tab
 
     '''<summary>
+    '''tab6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents tab6 As Global.Tab.Tab
+
+    '''<summary>
     '''tabSwapContainer control.
     '''</summary>
     '''<remarks>

@@ -1,0 +1,26 @@
+﻿.standardSuggestion {
+    /*background-color: transparent;*/
+    display: block;
+}
+
+.highlightSuggestion {
+    background-color: rgba(100,100,100,.5);
+}
+
+.suggestionContainerPlaceholder{
+    position: relative;
+}
+
+.suggestionContainer{
+    position: absolute;
+    top: 0px;
+    background-color: #eef;
+    border: solid darkgray 1px;
+    width: 100%;
+    padding-left: 3px;
+    display: none;
+}
+
+.suggestionContainerShow {
+    display: block;
+}

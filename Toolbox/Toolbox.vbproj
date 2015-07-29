@@ -107,11 +107,13 @@
     <Content Include="Scripts\Searches.js" />
     <Content Include="Scripts\Sorts.js" />
     <Content Include="Scripts\Tabs.js" />
+    <Content Include="Scripts\TextBoxSuggestions.js" />
     <Content Include="Scripts\Tries.js" />
     <Content Include="Styles\Generic.css" />
     <Content Include="Styles\grid.css" />
     <Content Include="Styles\master.css" />
     <Content Include="Styles\Tabs.css" />
+    <Content Include="Styles\TextBoxSuggestions.css" />
     <Content Include="Styles\Tries.css" />
     <Content Include="Web.config" />
     <Content Include="Pages\WordGame.aspx" />
@@ -217,11 +219,14 @@
     <Content Include="TabSamples\Searches.tab">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="TabSamples\Tries.tab" />
+    <Content Include="TabSamples\Tries.tab">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="TabSamples\BinaryTrees.tab" />
     <Content Include="TabSamples\Heaps.tab" />
     <Content Include="TabWordGame\MaxStats.tab" />
     <Content Include="TabWordGame\Score.tab" />
+    <Content Include="TabSamples\Clocks.tab" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

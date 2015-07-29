@@ -1,69 +1,25 @@
-﻿<h2 class="tab">
+﻿<div>
+  <h2 class="tab">
     <a class="tabLink" href="javascript:g.void();" onclick="tab.showTab(this);">Trie</a>
-</h2>
+  </h2>
 
-<div class="tabData noDisplay ">
+  <div class="tabData noDisplay ">
     <h3>Trie</h3>
     Available suggestions:
-<br />
+    <br />
     <span id="TrieAvailableSuggestions"></span>
     <br />
-    <div style="display: inline-block; padding: 0px; margin: 0px;">
-        <input style="width: 100%; margin: 0px;" type="text" value="" id="TrieSuggestionBox" onkeyup="DoSuggestion(event,this);" />
-        <div id="TrieDisplaySuggestionArray"></div>
+    <div style="display: inline-block; padding: 0px; margin: 0px;" id="TheSuggestionContainer">
+      <!--<input style="width: 100%; margin: 0px;" type="text" value="" id="TrieSuggestionBox" onkeyup="DoSuggestion(event,this);" />
+      <div id="TrieDisplaySuggestionArray"></div>-->
     </div>
     <script type="text/javascript">
-        var theWords = new EnglishWords();
-        var TrieArrayToLoad = theWords.Words;
+      var theWords = new EnglishWords();
+      var TrieArrayToLoad = theWords.Words;
 
-        trie.load(TrieArrayToLoad);
+      trie.load(TrieArrayToLoad);
 
-        function DoSuggestion(e, obj) {
-            var m = trie.suggest(obj.value);
-            var originalText = obj.value;
-            var keynum, bolDoSuggestion = false;
-
-            if (window.event) { // IE
-                keynum = e.keyCode;
-            } else
-                if (e.which) { // Netscape/Firefox/Opera
-                    keynum = e.which;
-                }
-
-            switch (true) {
-                case (keynum >= 48 && keynum <= 90):
-                case (keynum >= 186 && keynum <= 192):
-                case (keynum >= 219 && keynum <= 222):
-                    bolDoSuggestion = true;
-
-            };
-            if (bolDoSuggestion) {
-                obj.value = m;
-                obj.focus();
-                obj.setSelectionRange(originalText.length, obj.value.length);
-            }
-
-            var tempOptions = {
-                minLength: 3,
-                excludeWord: obj.value
-            }
-
-            var suggestAry = trie.suggestArray(originalText, tempOptions);
-            var destObj = document.getElementById("TrieDisplaySuggestionArray");
-
-            displaySuggestArray(destObj, suggestAry);
-
-        }
-        function displaySuggestArray(obj, aryToDisplay) {
-            var beginTag = "<input type='button' value='";
-            var endTag = "'/><br/>";
-            
-            if(aryToDisplay.length == 0){
-              beginTag = "";
-              endTag = "";
-            }            
-
-            obj.innerHTML = beginTag + aryToDisplay.join(endTag + beginTag) + endTag;
-        }
+      var textBoxSuggestion = TextBoxSuggestions(TheSuggestionContainer);
     </script>
+  </div>
 </div>
