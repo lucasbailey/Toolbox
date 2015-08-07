@@ -85,50 +85,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\button.svg" />
-    <Content Include="Images\drawing.svg" />
-    <Content Include="Images\drawingBold.svg" />
-    <Content Include="Images\lukebailey.svg" />
-    <Content Include="Images\test.jpg" />
-    <Content Include="index.aspx" />
-    <Content Include="Pages\AnotherFolder\WebForm2.aspx" />
-    <Content Include="Pages\Folder\WebForm1.aspx" />
-    <Content Include="Pages\YetAnotherFolder\WebForm3.aspx" />
-    <Content Include="Pages\Samples.aspx" />
-    <Content Include="Scripts\Analytics.js" />
-    <Content Include="Scripts\BinaryTrees.js" />
-    <Content Include="Scripts\CalculateAvailableWords.js" />
-    <Content Include="Scripts\Conversions.js" />
-    <Content Include="Scripts\EnglishWords.js" />
-    <Content Include="Scripts\Generic.js" />
-    <Content Include="Scripts\Heaps.js" />
-    <Content Include="Scripts\LetterValueCalculator.js" />
-    <Content Include="Scripts\LoadScreens.js" />
-    <Content Include="Scripts\Searches.js" />
-    <Content Include="Scripts\Sorts.js" />
-    <Content Include="Scripts\Tabs.js" />
-    <Content Include="Scripts\TextBoxSuggestions.js" />
-    <Content Include="Scripts\Tries.js" />
-    <Content Include="Styles\Generic.css" />
-    <Content Include="Styles\grid.css" />
-    <Content Include="Styles\master.css" />
-    <Content Include="Styles\Tabs.css" />
-    <Content Include="Styles\TextBoxSuggestions.css" />
-    <Content Include="Styles\Tries.css" />
-    <Content Include="Web.config" />
-    <Content Include="Pages\WordGame.aspx" />
-    <Content Include="WebAnalytics.asmx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Encryption.vb" />
-    <Compile Include="index.aspx.designer.vb">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.vb">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Minify.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -147,52 +103,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Pages\AnotherFolder\WebForm2.aspx.designer.vb">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AnotherFolder\WebForm2.aspx.vb">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Folder\WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Folder\WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\YetAnotherFolder\WebForm3.aspx.designer.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\YetAnotherFolder\WebForm3.aspx.vb">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Samples.aspx.designer.vb">
-      <DependentUpon>Samples.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Samples.aspx.vb">
-      <DependentUpon>Samples.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.vb">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site1.Master.vb">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WordGame.aspx.designer.vb">
-      <DependentUpon>WordGame.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\WordGame.aspx.vb">
-      <DependentUpon>WordGame.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebAnalytics.asmx.vb">
-      <DependentUpon>WebAnalytics.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -213,25 +123,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Site1.Master" />
-    <Content Include="TabSamples\NumberConversions.tab" />
-    <Content Include="TabSamples\Sorts.tab" />
-    <Content Include="TabSamples\Searches.tab">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="TabSamples\Tries.tab">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="TabSamples\BinaryTrees.tab" />
-    <Content Include="TabSamples\Heaps.tab" />
-    <Content Include="TabWordGame\MaxStats.tab" />
-    <Content Include="TabWordGame\Score.tab" />
-    <Content Include="TabSamples\Clocks.tab" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -244,11 +141,7 @@
       <Name>Tab</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Analytics\" />
-    <Folder Include="Drafts\" />
-    <Folder Include="MinifyConfig\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
